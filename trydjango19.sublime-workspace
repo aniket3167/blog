@@ -46,6 +46,14 @@
 				"buffer_size": 45,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "src/posts/views.py",
+			"settings":
+			{
+				"buffer_size": 4103,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -80,19 +88,28 @@
 	},
 	"expanded_folders":
 	[
-		"/home/aniket/Desktop/development/trydjango19"
+		"/home/aniket/Desktop/development/trydjango19",
+		"/home/aniket/Desktop/development/trydjango19/media_cdn",
+		"/home/aniket/Desktop/development/trydjango19/nblg",
+		"/home/aniket/Desktop/development/trydjango19/src",
+		"/home/aniket/Desktop/development/trydjango19/src/posts",
+		"/home/aniket/Desktop/development/trydjango19/src/templates",
+		"/home/aniket/Desktop/development/trydjango19/src/trydjango19",
+		"/home/aniket/Desktop/development/trydjango19/static_cdn",
+		"/home/aniket/Desktop/development/trydjango19/static_cdn/admin"
 	],
 	"file_history":
 	[
+		"/home/aniket/Desktop/development/trydjango19/src/posts/views.py",
+		"/home/aniket/Desktop/development/trydjango19/src/posts/forms.py",
+		"/home/aniket/Desktop/development/trydjango19/src/crud.md",
 		"/home/aniket/Desktop/development/trydjango19/src/templates/base.html",
 		"/home/aniket/Desktop/development/trydjango19/src/posts/urls.py",
 		"/home/aniket/Desktop/development/trydjango19/src/trydango19/urls.py",
 		"/home/aniket/Desktop/development/trydjango19/src/templates/post_detail.html",
-		"/home/aniket/Desktop/development/trydjango19/src/posts/forms.py",
 		"/home/aniket/Desktop/development/trydjango19/src/trydango19/crud.md",
 		"/home/aniket/Desktop/development/trydjango19/src/templates/message_display.html",
 		"/home/aniket/Desktop/development/trydjango19/src/templates/post_form.html",
-		"/home/aniket/Desktop/development/trydjango19/src/posts/views.py",
 		"/home/aniket/Desktop/development/trydjango19/src/posts/admin.py",
 		"/home/aniket/Desktop/development/trydjango19/src/posts/models.py",
 		"/home/aniket/Desktop/development/trydjango19/src/db.sqlite3",
@@ -135,7 +152,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -158,6 +175,35 @@
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/posts/views.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -222,12 +268,12 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
