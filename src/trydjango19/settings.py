@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 from decouple import config
 import os
 import dj_database_url
-from trydjango19.aws.conf import *
+#from trydjango19.aws.conf import *
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['django-heroku-blg.herokuapp.com']
+ALLOWED_HOSTS = ['django-heroku-blg.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -79,19 +79,19 @@ WSGI_APPLICATION = 'trydjango19.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 #for server hosting 
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
 
 #postgres://uklcctwkdvxetb:6f221fbf04cb8767c0c79719acfd965f1f18b6a27aefdd4d69eb636453e53769@ec2-54-225-241-25.compute-1.amazonaws.com:5432/d71c6bkmv6sn8f
 
@@ -131,18 +131,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "static"),
-#     #'/var/www/static/',
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    #'/var/www/static/',
+]
 
-#STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
+STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
 
-# MEDIA_URL = "/media/"
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
 #print MEDIA_ROOT
 #check
 
