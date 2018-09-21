@@ -21,8 +21,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^posts/', include("posts.urls", namespace='posts')),
-    #url(r'^posts/$', "<appname>.views.<function_name>"),
+    url(r'^', include("posts.urls", namespace='posts')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

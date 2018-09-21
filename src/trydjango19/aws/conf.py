@@ -4,8 +4,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 #DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID = 'AKIA27A5NRBQXCBES3X3'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIAJ4PO3XTONMVS6N3A'
+AWS_SECRET_ACCESS_KEY = 'oeZJArBtATMbYa+7L/TNG8aj0Ie5khAdbUaD/3xc'
+
+
 #from blog https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
 STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'

@@ -21,3 +21,9 @@ h1 {
 body {
 	    font-family: "BentonSans", "Helvetica Neue", sans-serif;
 }
+
+.padding_remove{
+   padding-left:0px;
+   padding-right: 0px;
+}
+
