@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+{% for obj in object_list %}
+
+    <div class="thumbnail">
+        
+        <div class="caption">
+        {% if obj.draft %}
+            <h1>Staff only: Draft</h1>
+        {% endif %} 
+        {% if obj.publish > today %}
+            <h1>Staff Only: Future Post</h1>
+        {% endif %}
+        <div>
+            <h1 >
+                <a class = 'title_list' href='{{ obj.get_absolute_url }}'>{{ obj.title }} </a> 
+            </h1>
+        </div>
+        <div>
+            <time datetime="2018-09-13T15:45:00Z" class="caps">
+                {{ obj.publish }}
+            
+
+            {% if obj.user.get_full_name %}
+             . {{ obj.user.get_full_name }}
+            {% endif %}
+            </time>
+            <br/>
+            <br/>
+        </div>
+        {% if obj.image %}
+            <img src='{{ obj.image.url }}' class='img-fluid' />
+        {% endif %}
+        <p>{{ obj.content|linebreaks|truncatechars:1000 }}</p>
+        <p><a href="{{ obj.get_absolute_url }}" class="btn btn-outline-primary" role="button">Read More</a></p>
+      </div>
+ </div>
+<hr/>
+
+
+{% endfor %}
+
+<div class="pagination">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination  ">
+            <li class="page-item">
+                {% if object_list.has_previous %}
+                    <a class="page-link" href="?{{ page_request_var }}={{ object_list.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Previous</a>
+                {% endif %}
+            </li>
+            <li class="page-item">
+                <a class="page-link" >Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}
+                </a>
+            </li>
+            
+            <li class="page-item">
+                {% if object_list.has_next %}
+
+                    <a class="page-link" href="?{{ page_request_var }}={{ object_list.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Next
+                    </a>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+    
+</div>
+
+
+
+
+</div>
+
+{% endblock content %}
