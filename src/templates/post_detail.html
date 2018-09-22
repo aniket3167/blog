@@ -19,19 +19,11 @@
 			{% if instance.user.get_full_name %}
 				| {{ instance.user.get_full_name }}
 			{% endif %}
-<<<<<<< HEAD
 		<br/>
 		Read time: {% if instance.read_time <= 1 %} < 1 Minute {% else %}{{ instance.read_time }} minutes {% endif %}
 		</p>
 	</small>
 	
-=======
-		
-		Read time: {% if instance.read_time <= 1 %} < 1 Minute {% else %}{{ instance.read_time }} minutes {% endif %}
-		</p>
-	</small>
-	<div class="fb-like add_bottom_margin" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
->>>>>>> 87918b15132dde55f91c7b891f45b9e785c3f385
     {% if instance.image %}
     <img src='{{ instance.image.url }}' class='img-fluid' />
     {% endif %}
@@ -62,11 +54,7 @@ Linkedin
 <div class='col-sm-12'>
 
 <div class='post-detail-item'>{{ instance.get_markdown }}</div>
-<<<<<<< HEAD
 <div class="fb-like add_bottom_margin" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-=======
-
->>>>>>> 87918b15132dde55f91c7b891f45b9e785c3f385
 <hr/>
 <br/>
 

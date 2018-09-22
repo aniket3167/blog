@@ -81,11 +81,7 @@ def post_list(request):
 				Q(user__first_name__icontains=query) |
 				Q(user__last_name__icontains=query)
 				).distinct()
-<<<<<<< HEAD
 	paginator = Paginator(queryset_list, 5) # Show 25 contacts per page
-=======
-	paginator = Paginator(queryset_list, 8) # Show 25 contacts per page
->>>>>>> 87918b15132dde55f91c7b891f45b9e785c3f385
 	page_request_var = "page"
 	page = request.GET.get(page_request_var)
 	try:
