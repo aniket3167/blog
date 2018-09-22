@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<<<<<<< HEAD
 <br/>
 <br/>
 <br/>
@@ -8,10 +9,20 @@
 
 {% for obj in object_list %}
 
+=======
+
+<div>
+    <h1 >{{ title }}</h1>
+
+{% for obj in object_list %}
+<div class="row">
+  <div class="col-sm-12">
+>>>>>>> 87918b15132dde55f91c7b891f45b9e785c3f385
     <div class="thumbnail">
         
         <div class="caption">
         {% if obj.draft %}
+<<<<<<< HEAD
             <h1>Staff only: Draft</h1>
         {% endif %} 
         {% if obj.publish > today %}
@@ -33,6 +44,24 @@
             </time>
             <br/>
             <br/>
+=======
+            <h3>Staff only: Draft</h3>
+        {% endif %} 
+        {% if obj.publish > today %}
+            <h3>Staff Only: Future Post</h3>
+        {% endif %}
+        <div>
+            <h3 >
+                <a class = 'title_list' href='{{ obj.get_absolute_url }}'>{{ obj.title }} </a> 
+            </h3>
+        </div>
+        <div>
+            <small>{{ obj.publish }}
+            {% if obj.user.get_full_name %}
+             . {{ obj.user.get_full_name }}
+            {% endif %}
+            </small>
+>>>>>>> 87918b15132dde55f91c7b891f45b9e785c3f385
         </div>
         {% if obj.image %}
             <img src='{{ obj.image.url }}' class='img-fluid' />
@@ -40,12 +69,23 @@
         <p>{{ obj.content|linebreaks|truncatechars:1000 }}</p>
         <p><a href="{{ obj.get_absolute_url }}" class="btn btn-outline-primary" role="button">Read More</a></p>
       </div>
+<<<<<<< HEAD
  </div>
 <hr/>
 
 
 {% endfor %}
 
+=======
+    </div>
+  </div>
+<hr/>
+</div>
+<hr/>
+{% endfor %}
+
+
+>>>>>>> 87918b15132dde55f91c7b891f45b9e785c3f385
 <div class="pagination">
     <nav aria-label="Page navigation example">
         <ul class="pagination  ">

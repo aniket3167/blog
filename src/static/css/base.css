@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 h1, h1:hover {
     color: #79589F;
 }
 
 a, a:hover{
   color: #79589F;
+=======
+h1 {
+    color: #777777;
+>>>>>>> 87918b15132dde55f91c7b891f45b9e785c3f385
 }
 
 .margin_delete {
@@ -30,3 +35,7 @@ body {
    padding-left:0px;
    padding-right: 0px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 87918b15132dde55f91c7b891f45b9e785c3f385
