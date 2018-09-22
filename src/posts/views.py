@@ -9,14 +9,17 @@ except:
     pass
 
 from django.contrib import messages
+from django.contrib.contenttypes.models import ContentType
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-
 from .forms import PostForm
 from .models import Post
+
+from django.views.generic import DetailView
 
 def post_create(request):
 	if not request.user.is_staff or not request.user.is_superuser:
@@ -34,13 +37,6 @@ def post_create(request):
 		"form": form,
 	}
 	return render(request, "post_form.html", context)
-
-'''
-Created for Django Code Review
-'''
-
-from django.views.generic import DetailView
-
 class PostDetailView(DetailView):
 	template_name = 'post_detail.html' 
 	
@@ -57,16 +53,13 @@ class PostDetailView(DetailView):
 		instance = context['object']
 		context['share_string'] = quote_plus(instance.content)
 		return context
-	
-# in urls.py --> PostDetailView.as_view() instead of post_detail
-
 
 def post_detail(request, slug=None):
 	instance = get_object_or_404(Post, slug=slug)
 	if instance.publish > timezone.now().date() or instance.draft:
 		if not request.user.is_staff or not request.user.is_superuser:
 			raise Http404
-	share_string = quote_plus(instance.content)
+	share_string = quote_plus(instance.content.encode('utf8'))
 	context = {
 		"title": instance.title,
 		"instance": instance,
