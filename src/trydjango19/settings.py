@@ -80,19 +80,19 @@ WSGI_APPLICATION = 'trydjango19.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 #for server hosting 
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
 
 #postgres://uklcctwkdvxetb:6f221fbf04cb8767c0c79719acfd965f1f18b6a27aefdd4d69eb636453e53769@ec2-54-225-241-25.compute-1.amazonaws.com:5432/d71c6bkmv6sn8f
 
