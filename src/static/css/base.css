@@ -1,3 +1,32 @@
-h1 {
-    color: #777777;
+h1, h1:hover {
+    color: #79589F;
+}
+
+a, a:hover{
+  color: #79589F;
+}
+
+.margin_delete {
+	margin-bottom: 0px;
+}
+.add_margin_bottom {
+	margin-bottom: 20px;
+}
+
+.title_list {
+
+	font-size: 34px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #79589F;
+    margin-bottom: 10px;
+}
+
+body {
+	    font-family: "BentonSans", "Helvetica Neue", sans-serif;
+}
+
+.padding_remove{
+   padding-left:0px;
+   padding-right: 0px;
 }
