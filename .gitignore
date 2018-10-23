@@ -2,4 +2,5 @@
 *lib
 *local
 *nblg
+*.pyc
 src/trydjango19/aws/conf.py
